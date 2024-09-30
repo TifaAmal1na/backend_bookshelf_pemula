@@ -1,5 +1,4 @@
-const { addBook, getBookById, updateBook, deleteBook } = require('./handler');
-const getAllBooks = require('./getAllBooks');
+import { addBook, getBookById, updateBook, deleteBook, getAllBooks } from './handler.js'; // Menggunakan sintaks ES module
 
 const routes = [
     {
@@ -29,4 +28,4 @@ const routes = [
     },
 ];
 
-module.exports = routes;
+export default routes; // Menggunakan sintaks ekspor ES module

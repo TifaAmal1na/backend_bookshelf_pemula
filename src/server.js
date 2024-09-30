@@ -1,5 +1,5 @@
-const Hapi = require('@hapi/hapi');
-const routes = require('./routes');
+import Hapi from '@hapi/hapi'; // Menggunakan sintaks ES module untuk mengimpor Hapi
+import routes from './routes.js'; // Menggunakan sintaks ES module untuk mengimpor routes
 
 const init = async () => {
     const server = Hapi.server({
@@ -18,4 +18,5 @@ process.on('unhandledRejection', (err) => {
     process.exit(1);
 });
 
+// Memanggil fungsi init untuk memulai server
 init();
